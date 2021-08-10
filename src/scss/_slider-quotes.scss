@@ -1,0 +1,133 @@
+.slider-quotes {
+  user-select: none;
+
+  position: relative;
+
+  width: 100%;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 423px;
+
+    opacity: 0.5;
+
+    @media (min-width: $desktop-width-quotes) {
+      margin: 0 32px;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 171%;
+    font-family: "Roboto" ,sans-serif;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 40px;
+
+
+    background-color: #ffffff;
+    border: 1px solid #d8e3fe;
+
+    @media (min-width: $desktop-width-quotes) {
+      text-align: left;
+      
+      padding: 40px 65px 40px 70px;
+    }
+  }
+
+  &__img {
+    margin-top: -33px;
+  }
+
+  // Ограничивающая оболочка
+  & .slick-list {
+    overflow: hidden;
+
+    position: relative;
+  }
+
+  // Лента слайдов
+  & .slick-track {
+    display: flex;
+  }
+
+  // Слайдер запущен
+  .slick-slider.slick-initialized{}
+  // Слайдер с точками
+  .slick-slider.slick-dotted{}
+  // Слайд
+  .slick-slide{}
+  // Слайд активный (показывается)
+  .slick-slide.slick-active{
+    opacity: 1;
+  }
+  // Слайд основной
+  .slick-slide.slick-current{}
+  // Слайд по центру
+  .slick-slide.slick-center{}
+  // Клонированный слайд
+  .slick-slide.slick-cloned{}
+
+
+
+  // Стрелка не активная
+  .slick-arrow.slick-disabled{}
+
+  // Точки (булиты)
+  & .slick-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    left: 0;
+    bottom: -56px;
+
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    @media (min-width: $desktop-width-quotes) {
+      justify-content: flex-start;
+    }
+  }
+
+  & .slick-dots li {
+    list-style: none;
+
+    margin: 0 6px;
+
+    // Активная точка
+    &.slick-active button{
+      background-color: #5283FF;
+    }
+  }
+
+  // Элемент точки
+  & .slick-dots li button {
+    display: block;
+
+    font-size: 0;
+    line-height: 0;
+
+    width: 8px;
+    height: 8px;
+
+    padding: 0;
+
+    background-color: #D1D6E3;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+}

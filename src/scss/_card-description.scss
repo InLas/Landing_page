@@ -1,0 +1,93 @@
+.card-description {
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
+
+  &__title {
+    display: block;
+
+    font-size: 36px;
+    font-weight: normal;
+
+    margin: 0;
+    margin-bottom: 27px;
+    padding: 0;
+
+    color: #3D4F9F;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 191%;
+    font-family: "Roboto" ,sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+
+
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0;
+
+    @media (min-width: $desktop-width) {
+      margin: 0;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    @media (min-width: $desktop-width) {
+      justify-content: flex-start;
+
+      margin-top: auto;
+    }
+  }
+
+  &__link {
+    display: block;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    box-sizing: border-box;
+
+    width: 113px;
+
+    margin-right: 8px;
+    padding: 13px 0;
+
+    color: #3A79FF;
+    background-color: #D2E1FF;
+    border-radius: 3px;
+    transition: 0.3s;
+
+    &:hover,
+    &:focus {
+      color: #697CA6;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+
+  &__link--inner {
+    width: 211px;
+
+    margin: 0;
+
+    color: #A6B6DA;
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+      color: #D43F3F;
+    }
+  }
+}

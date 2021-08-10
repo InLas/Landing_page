@@ -1,0 +1,20 @@
+.page {
+  display: flex;
+  flex-direction: column;
+
+  font-family: $fontfamily;
+  font-size: $fontsize;
+  line-height: $lineheight;
+  font-weight: $fontweight;
+
+  min-height: 100%;
+
+  margin: 0 auto;
+
+  color: $mainColor;
+  background-color: #ffffff;
+}
+
+.page-main {
+  flex: 1 1 auto;
+}

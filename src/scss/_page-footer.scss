@@ -1,0 +1,38 @@
+.page-footer {
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 60px 15px 45px;
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+      align-items: center;
+
+      max-width: 1240px;
+
+      padding: 93px 15px 150px;
+    }
+  }
+
+  &__copyright {
+    letter-spacing: 0.05em;
+
+    margin: 0;
+    padding: 0;
+
+    color: #AEB8D0;
+
+    @media (min-width: $tablet-width) {
+      align-self: flex-start;
+
+      margin-left: 45px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-left: 100px;
+    }
+  }
+}

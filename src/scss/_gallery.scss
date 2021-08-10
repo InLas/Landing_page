@@ -1,0 +1,97 @@
+.gallery {
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 267px 126px;
+    grid-template-rows: 126px 126px;
+    grid-gap: 13px;
+
+  }
+
+  &__big {
+
+    @media (min-width: $tablet-width) {
+      grid-row-start: 1;
+      grid-row-end: 1;
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
+  }
+
+  &__small {
+    &--1 {
+      @media (min-width: $tablet-width) {
+        grid-row-start: 1;
+      }
+    }
+
+    &--2 {
+      @media (min-width: $tablet-width) {
+        grid-column-start: 2;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    transition: 0.8s;
+    transform-style: preserve-3d;
+    outline: none;
+
+    &--big {
+      height: 267px;
+    }
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      transform: rotateY(90deg);
+      transform-origin: right;
+
+      width: 20px;
+      height: 100%;
+
+      background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1));
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      transform: translate(-50%, -50%);
+
+      width: 65px;
+      height: 65px;
+
+      opacity: 0;
+
+      background: no-repeat center url(../img/gallery/search-icon.svg),
+                  #ffffff;
+      border-radius: 50%;
+      transition: 0.3s;
+    }
+
+
+    &:hover,
+    &:focus {
+      transform: rotateY(40deg);
+
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+}

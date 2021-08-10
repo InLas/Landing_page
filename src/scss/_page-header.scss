@@ -1,0 +1,140 @@
+.page-header {
+  @media (min-width: $tablet-width) {
+    position: fixed;
+
+    width: 100%;
+
+    background-color: #ffffff;
+    z-index: 9999999;
+  }
+
+  &__container {
+    padding: 0;
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+      align-items: center;
+
+      max-width: 1240px;
+      min-height: 80px;
+
+      padding: 0 15px;
+    }
+  }
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: fixed;
+
+  box-sizing: border-box;
+
+  width: 100%;
+  min-height: 80px;
+
+  padding: 15px;
+
+  z-index: 5;
+
+  @media (min-width: $tablet-width) {
+    position: static;
+
+    width: auto;
+    min-height: auto;
+
+    padding: 0;
+
+    box-shadow: none;
+
+    z-index: 0;
+
+    @media (min-width: $desktop-width) {
+      margin-right: 55px;
+    }
+  }
+
+  &__logo {
+    font-size: 0;
+    line-height: 0;
+
+    width: 26px;
+    height: 26px;
+
+    background-color: #5E81FE;
+    border-radius: 50%;
+  }
+
+  &__toogle {
+    font-size: 0;
+    line-height: 0;
+
+    position: relative;
+
+    width: 40px;
+    height: 35px;
+
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 4px;
+
+      background-color: #5E81FE;
+      box-shadow: 0 14px 0 #5E81FE,
+                  0 27px 0 #5E81FE;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    &--open {
+      &::before {
+        top: 15px;
+        left: 0;
+  
+        width: 100%;
+        height: 4px;
+
+        transform: rotate(-45deg);
+  
+        background-color: #5E81FE;
+        box-shadow: none;
+      }
+
+      &::after {
+        content: "";
+  
+        position: absolute;
+        top: 15px;
+        left: 0;
+  
+        width: 100%;
+        height: 4px;
+
+        transform: rotate(45deg);
+  
+        background-color: #5E81FE;
+        border-radius: 5px;
+        transition: 0.3s;
+      }
+    }
+
+    &--no-js {
+      display: none;
+    }
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+}

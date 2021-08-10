@@ -1,0 +1,145 @@
+.pricing {
+  position: relative;
+
+  background: linear-gradient(to bottom left, #6888FF, #5E80FF);
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: #D8E3FE;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 90px 15px;
+
+    background: 
+    no-repeat top right url(../img/pricing/clouds-top-right.png),
+    no-repeat bottom left url(../img/pricing/clouds-bottom-left.png);
+  
+    @media (min-width: $tablet-width) {
+      background: 
+      no-repeat center left url(../img/pricing/clouds-left.png),
+      no-repeat bottom right url(../img/pricing/clouds-right.png);
+    }
+  }
+
+  &__subtitle {
+    display: block;
+
+    font-size: 10px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+
+    margin-bottom: 16px;
+
+    color: #ffffff;
+  }
+
+  &__title {
+    font-size: 48px;
+    font-weight: 300;
+
+    margin: 0;
+    margin-bottom: 23px;
+    padding: 0;
+
+    color: #ffffff;
+
+    @include adaptiv-value('font-size', 48, 36, 1);
+  }
+
+  &__title-bold {
+    font-size: inherit;
+    font-weight: 500;
+
+    color: inherit;
+  }
+
+  &__text {
+    font-size: 15px;
+    line-height: 191%;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+
+    max-width: 710px;
+
+    margin: 0;
+    margin-bottom: 55px;
+    padding: 0;
+
+    color: #ffffff;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    @media (min-width: $tablet-width) {
+     justify-content: flex-start;
+    }
+  }
+
+  &__link {
+    display: block;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    box-sizing: border-box;
+
+    width: 130px;
+
+    padding: 13px 0;
+
+    color: #565F82;
+    background-color: #ffffff;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    transition: 0.3s;
+
+    &:hover,
+    &:focus {
+      color: #d43f3f;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  &__link--inner {
+    font-weight: 500;
+    white-space: nowrap;
+
+    width: 155px;
+    
+    padding: 12px 0;
+
+    color: #C7D3FF;
+    background-color: transparent;
+    border: 1px solid #D1D1E4;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+}

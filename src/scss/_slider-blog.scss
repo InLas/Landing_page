@@ -1,0 +1,162 @@
+.slider-blog {
+  width: 100%;
+
+  user-select: none;
+
+  position: relative;
+
+  &__item {
+    padding: 20px;
+
+    background-color: #ffffff;
+    border: 1px solid #D8E3FE;
+
+    @media (min-width: $tablet-width) {
+      padding: 63px 40px 63px 35px;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__gallery {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      max-width: 406px;
+
+      margin-bottom: 30px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin: 0;
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    max-width: 408px;
+
+    @media (min-width: $desktop-width) {
+      align-items: flex-start;
+
+      text-align: left;
+    }
+  }
+
+  // Ограничивающая оболочка
+  & .slick-list {
+    overflow: hidden;
+  }
+
+  // Лента слайдов
+  & .slick-track {
+    display: flex;
+  }
+
+  // Стрелка
+  & .slick-arrow {
+    font-size: 0;
+    line-height: 0;
+
+    position: absolute;
+    top: 50%;
+
+    width: 27px;
+    height: 20px;
+
+    padding: 0;
+
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease 0s;
+
+    @extend ._icon-slider-arrow;
+    &::before {
+      @extend %ic;
+      font-size: 19px;  
+
+      color: #A8B4E5;
+      opacity: 1;
+      transition: color 0.3s ease 0s;
+    }
+
+    @media (any-hover: hover) {
+      &:hover::before {
+        color: #3A79FF;
+      }
+    }
+  }
+
+  // Стрелка влево
+  & .slick-prev{
+    left: -100px;
+
+    transform: rotate(180deg);
+  }
+
+  // Стрелка вправо
+  & .slick-next{
+    right: -100px;
+  }
+
+  // Точки (булиты)
+  & .slick-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    @media (min-width: $tablet-width) {
+      bottom: -108px;
+    }
+  }
+
+  & .slick-dots li {
+    list-style: none;
+
+    margin: 0 6px;
+
+    height: 8px;
+
+    // Активная точка
+    &.slick-active button{
+      background-color: #5283FF;
+    }
+  }
+
+  // Элемент точки
+  & .slick-dots li button {
+    display: block;
+
+    font-size: 0;
+    line-height: 0;
+
+    width: 8px;
+    height: 8px;
+
+    padding: 0;
+
+    background-color: #D1D6E3;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+}
