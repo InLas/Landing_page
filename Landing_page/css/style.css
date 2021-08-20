@@ -119,15 +119,6 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 
-@font-face {
-  font-family: "icons";
-  font-display: swap;
-  src: url(../../fonts/icons.woff) format("woff"), url(../../fonts/icons.woff2) format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
-}
-
 [class^="_icon-"]::before,
 [class*=" _icon-"]::before,
 .slider-intro__link::before,
